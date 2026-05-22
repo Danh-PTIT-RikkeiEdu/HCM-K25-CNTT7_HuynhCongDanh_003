@@ -165,7 +165,8 @@ where room_id = (
 
 -- Phan 4
 -- 1
-
+create index idx_booking_status_cgh
+on Bookings (booking_status, check_in_date);
 
 -- 2
 drop view if exists vw_guest_booking_status;
@@ -279,3 +280,4 @@ delimiter //
     end //
 
 delimiter ;
+
